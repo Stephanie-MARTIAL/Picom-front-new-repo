@@ -1,0 +1,38 @@
+<h1>Je m'inscris</h1>
+
+<form #formInscription="ngForm" (ngSubmit)="onSubmit()" novalidate class="form-group col-3">
+  <div class="mb-3">
+    <label for="nom">Nom</label>
+    <input type="text" id="nom" [(ngModel)]="clientForm.nom" name= "nom" class="form-control"/>
+  </div>
+  <div class="mb-3">
+    <label for="prenom">Prenom</label>
+    <input type="text" id="prenom" [(ngModel)]="clientForm.prenom" name="prenom" class="form-control"/>
+  </div>
+  <div class="mb-3">
+    <label for="email">Email</label>
+    <input type="email" id="email" [(ngModel)]="clientForm.email" name="email" class="form-control"/>
+  </div>
+  <div class="mb-3">
+    <label for="motDePasse">Mot de passe</label>
+    <input type="password" id="motDePasse" [(ngModel)]="clientForm.motDePasse" name="motDePasse" class="form-control"/>
+  </div>
+  <div class="mb-3">
+    <label for="telephone">Numero de téléphone</label>
+    <input type="text" id="telephone" [(ngModel)]="clientForm.numeroDeTelephone" name="numeroDeTelephone" class="form-control"/>
+  </div>
+  <div>
+    <input type="number" [(ngModel)]="clientForm.id" name="id" [ngModelOptions]="{standalone: true}" class="form-control" hidden>
+  </div>
+  <div class="btn-action">
+    <button type="submit" class="btn btn-primary">Créer mon compte</button>
+    <div class="btn-retour">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16" routerLinkActive="active" routerLink="/connexion">
+        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+      </svg>
+      <a routerLink="/connexion">Retour à la page connexion</a>
+    </div>
+  </div>
+</form>
+
+

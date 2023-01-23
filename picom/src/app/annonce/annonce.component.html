@@ -1,0 +1,32 @@
+<h2>Liste des annonces</h2>
+<div class="annonces-flex-col">
+  <table>
+    <thead>
+      <tr>
+      <th>Date et Heure création</th>
+      <th>Date et heure de début</th>
+      <th>Date et heure de fin</th>
+      <th>Contenu</th>
+      <th>Zone</th>
+      <th>Tranche Horaires</th>
+      <th>Modifier annonce</th>
+      <th>Supprimer annonce</th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor="let annonce of annoncesList">
+        <td>{{annonce.dateHeureCreation}}</td>
+        <td>{{annonce.dateHeureDebut}}</td>
+        <td>{{annonce.dateHeureFin}}</td>
+        <td>{{annonce.contenu}}</td>
+        <td ><li class="list-zones" *ngFor="let zone of annonce['zones']">{{zone.nom}}</li></td>
+        <td><li *ngFor="let trancheHoraire of annonce['tranchesHoraires']">{{trancheHoraire.debut}}h-{{trancheHoraire.debut+1}}h</li></td>
+        <td><button type="button" class="btn btn-warning btn-sm btn-sm mb-4" routerLinkActive="active" routerLink="/modifier-annonce">Modifier annonce</button></td>
+        <td><button type="buton" class="btn btn-danger btn-sm mb-4" routerLinkActive="active" routerLink="">Supprimer annonce</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-primary" routerLinkActive="active" routerLink="/ajouter-annonce">Ajouter une annonce</button>
+</div>
+
+

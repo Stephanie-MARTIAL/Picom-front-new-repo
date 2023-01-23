@@ -1,0 +1,60 @@
+h1, h3{
+  margin-top: 1em;
+  text-align:center;
+}
+
+.container{
+  display:flex;
+  flex-direction: column;
+}
+
+.editor-center{
+  margin:1% 15%;
+}
+.addAnnonce-flex-row{
+  display:flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.addAnnonce-flex-col{
+  display:flex;
+  flex-direction: column;
+}
+
+legend{
+  font-size:medium;
+  text-align: center;
+}
+
+.zoneCheck{
+  text-align: center;
+}
+
+.addAnnonce-checkbox{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  padding:0 1em;
+}
+
+.div-paiemnt{
+  padding:1em;
+}
+
+.title-zone{
+  font-size: 1.2em; 
+  font-weight: bold; 
+  margin-top: 1em;
+  margin-bottom:0.5em;
+}
+
+.title-date{
+  font-weight: bold; 
+  margin-top: 2em;
+}

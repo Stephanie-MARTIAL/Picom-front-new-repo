@@ -1,0 +1,55 @@
+
+<div class="container">
+  <table>
+    <thead>
+        <tr>
+            <th colspan="5">Liste des prix</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Ajouter par</td>
+            <td>Zone</td>
+            <td>Tranche Horaire</td>
+            <td>Prix en euros</td>
+            <td>Supprimer</td>
+        </tr>
+        <tr *ngFor="let tarif of ListTarifs">
+          <td>{{tarif['administrateur'].prenom}} {{tarif['administrateur'].nom}}</td>
+          <td>{{tarif['zone'].nom}}</td>
+          <td>{{tarif['trancheHoraire'].debut}}h-{{tarif['trancheHoraire'].debut+1}}h</td>
+          <td>{{tarif.prixEnEuros}}€</td>
+          <td> <button class= "btn btn-danger" id="{{tarif.id}}" (click)="deleteTarif(tarif.id)">Oui</button></td>
+        </tr>
+    </tbody>
+  </table>
+  <br>
+  <div >
+    <form class="tarif-flex-col" (ngSubmit)="onSubmit()" #formTarif="ngForm" novalidate>
+      <div class="tarif-flex-row">
+        <div>
+          <input type="number" [(ngModel)]="tarifForm.idAdministrateur" [ngModelOptions]="{standalone: true}" value="2" class="form-control" hidden>
+        </div>
+        <div class="tarif-flex-col">
+          <label for="zones">Zones :</label>
+          <select name="zones" [(ngModel)]="tarifForm.idZone" class="form-select">
+            <option value="0">Sélectionner la zone</option>
+            <option *ngFor="let zone of ListZones" [ngValue]="zone.id" required>{{zone.nom}}</option>
+          </select>
+        </div>
+        <div class="tarif-flex-col ">
+          <label for="trancheHoraires">Tranche-Horaire :</label>
+          <select name="trancheHoraires" [(ngModel)]="tarifForm.idTrancheHoraire" class="form-select" >
+            <option selected value="0">Sélectionner la tranche-Horaire</option>
+            <option *ngFor="let trancheHoraire of ListTrancheHoraires" [ngValue]="trancheHoraire.id" required>{{trancheHoraire.debut}}h-{{trancheHoraire.debut+1}}h</option>
+          </select>
+        </div>
+        <div class="tarif-flex-col">
+          <label for="prixEnEuros">Tarif :</label>
+          <input type="number" [(ngModel)]="tarifForm.prixEnEuros" class="form-control" id="prixEnEuros" name="prixEnEuros" placeholder="Prix en euros" required #prixEnEuros="ngModel">
+        </div>
+      </div>
+      <button class="addPrice btn btn-dark" type="submit" [disabled]="!formTarif.form.valid">Ajouter un prix</button>
+    </form>
+  </div>
+</div>

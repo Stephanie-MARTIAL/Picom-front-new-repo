@@ -1,0 +1,24 @@
+<h1>Picom</h1>
+
+<form #connexionForm="ngForm" (ngSubmit)="onSubmit()" novalidate class="form-group col-2">
+  <div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" id="email" [(ngModel)]="authenticationForm.email" name="email" class="form-control"/>
+      <!-- <div [class.error]="!email.valid && email.touched"></div> -->
+    </div>
+    <div class="mb-3">
+      <label for="motDePasse" class="form-label">Mot de passe</label>
+      <input type="password" id="motDePasse" [(ngModel)]="authenticationForm.motDePasse" name="motDePasse" class="form-control"/>
+      <!-- <div [class.error]="!motDePasse.valid && motDePasse.touched"></div> -->
+    </div>
+  </div>
+
+  <div>
+    <button class="btn btn-primary">
+        <!-- <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span> -->
+        Connexion
+    </button>
+    <a routerLink="/inscription" class="btn btn-link">Pas de compte? Je m'inscris ici</a>
+  </div>
+</form>

@@ -1,0 +1,12 @@
+footer {
+  background:#333;
+  text-align: center;
+  padding: 2.5rem;
+  height: fit-content;
+
+}
+
+a {
+    margin-left: 20px;
+    color:rgb(135 185 229);
+  }

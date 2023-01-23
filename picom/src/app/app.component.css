@@ -1,0 +1,21 @@
+.wrapper {
+  min-height: 100vh;
+  /* position: relative; */
+}
+
+.main {
+  box-sizing: content-box;
+  padding-bottom: 15rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
+
+
+
+

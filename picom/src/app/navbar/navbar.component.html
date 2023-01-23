@@ -1,0 +1,19 @@
+<header *ngIf="nav.visible">
+
+  <nav class="menu">
+    <div class="title">
+      <a href="#" >Picom</a>
+    </div>
+    <ul>
+      <li class="nav-item">
+        <a routerLinkActive="active" routerLink="/connexion">Accueil</a>
+      </li>
+      <li>
+        <a routerLinkActive="active" routerLink="/ajouter-annonce">Rédiger une annonce</a>
+      </li>
+      <li>
+        <a routerLinkActive="active" routerLink="/annonces-liste">Liste des annonces</a>
+      </li>
+    </ul>
+  </nav>
+</header>

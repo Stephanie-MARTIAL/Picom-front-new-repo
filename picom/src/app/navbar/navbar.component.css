@@ -1,0 +1,49 @@
+header
+{
+  height: 100px;
+  background-color: rgb(135, 185, 229);
+  margin-bottom: 100px;
+}
+
+.title {
+  font-size: 2em;
+}
+
+a{
+  text-decoration: none;
+  color:black;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+.menu{
+  margin:1% 33%;
+}
+
+.menu ul{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu ul li{
+  list-style:none;
+  text-align: center;
+  margin:0 0.5em;
+}
+
+
+.menu ul li:hover{
+  background-color: black;
+}
+.menu ul li:hover a{
+  color:white
+}
+
+nav{
+  display: inline-flex;
+}
+
+div{
+ justify-content: flex-start;
+}
